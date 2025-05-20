@@ -17,14 +17,3 @@ A one-command Docker image that bundles the core utilities you need for small-to
 *(Exact versions are pinned in [`sra-env.yml`](./sra-env.yml).)*
 
 
----
-
-## 🔧 Quick Start – Use the Pre-built Image
-
-```bash
-
-
-
-# sanity-check a couple of tools after the env is ther
-fastqc --version
-hisat2 --version | head -n 2
