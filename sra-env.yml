@@ -1,0 +1,17 @@
+name: sra-env
+channels:
+  - defaults
+  - bioconda
+  - conda-forge
+dependencies:
+  - cutadapt
+  - python=3.10
+  - fastqc
+  - multiqc
+  - hisat2
+  - sra-tools
+  - samtools
+  - subread
+  - raxml
+  - emboss
+  - raxml-ng
