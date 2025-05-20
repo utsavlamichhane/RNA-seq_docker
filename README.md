@@ -22,14 +22,9 @@ A one-command Docker image that bundles the core utilities you need for small-to
 ## 🔧 Quick Start – Use the Pre-built Image
 
 ```bash
-# pull the image (replace USERNAME if you push under your own account)
-docker pull USERNAME/sra-env:2025-05-20
 
-# jump into an interactive shell; current directory is mounted at /workspace
-docker run --rm -it -v "$PWD":/workspace USERNAME/sra-env:2025-05-20
-# inside the container you should see:
-# (sra-env) root@container:/workspace#
 
-# sanity-check a couple of tools
+
+# sanity-check a couple of tools after the env is ther
 fastqc --version
 hisat2 --version | head -n 2
