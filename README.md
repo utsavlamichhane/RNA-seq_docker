@@ -1,4 +1,4 @@
-# 🐳 **sra-env** — Portable RNA-Seq Toolkit
+ **sra-env** — Portable RNA-Seq Toolkit
 
 A one-command Docker image that bundles the core utilities you need for small-to-medium RNA-Seq projects—built entirely from **Bioconda** and **Conda-Forge** packages.
 
