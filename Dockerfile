@@ -1,17 +1,20 @@
-# --- RNA-Seq environment (Conda) ---------------------------------------------
-FROM mambaforge/mambaforge:latest          # tiny, multi-arch Conda base
+# conda environment 
+FROM mambaforge/mambaforge:latest          # #tiny, multi-arch Conda (the base conda)
 
-# 1. copy the environment spec into the image
+
+###ok copy the environment specs into the IMAge
 COPY sra-env.yml /tmp/env.yml
 
-# 2. build the Conda env (lands in /opt/conda/envs/sra-env)
+
+##conda env (i mean building conda env)
 RUN mamba env create -f /tmp/env.yml --quiet && \
     mamba clean -afy && \
     echo "conda activate sra-env" >> /etc/profile.d/conda.sh
 
-# 3. final container settings
-SHELL ["bash", "-l", "-c"]                 # every RUN uses login-style bash
+
+##the container setting
+SHELL ["bash", "-l", "-c"]                 ###login style kindaa bash
 WORKDIR /workspace
 ENV PATH=/opt/conda/envs/sra-env/bin:$PATH
 ENTRYPOINT ["/bin/bash"]
-CMD ["-l"]                                 # default ⇒ interactive shell
+CMD ["-l"]                                 #######the defau us interactive 
